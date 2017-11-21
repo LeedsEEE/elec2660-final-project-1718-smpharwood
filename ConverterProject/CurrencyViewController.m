@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  FirstViewController.m
 //  ConverterProject
 //
 //  Created by Sebastian Harwood [el16sh] on 21/11/2017.
 //  Copyright © 2017 University of Leeds. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "CurrencyViewController.h"
 
-@interface SecondViewController ()
+@interface CurrencyViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation CurrencyViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

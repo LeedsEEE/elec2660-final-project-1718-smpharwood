@@ -1,18 +1,18 @@
 //
-//  FirstViewController.m
+//  SecondViewController.m
 //  ConverterProject
 //
 //  Created by Sebastian Harwood [el16sh] on 21/11/2017.
 //  Copyright © 2017 University of Leeds. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "TimeZoneViewController.h"
 
-@interface FirstViewController ()
+@interface TimeZoneViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation TimeZoneViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

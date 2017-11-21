@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		ABE60A5C1FC4492B00668B23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A5B1FC4492B00668B23 /* main.m */; };
 		ABE60A5F1FC4492B00668B23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A5E1FC4492B00668B23 /* AppDelegate.m */; };
-		ABE60A621FC4492B00668B23 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A611FC4492B00668B23 /* FirstViewController.m */; };
-		ABE60A651FC4492B00668B23 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A641FC4492B00668B23 /* SecondViewController.m */; };
+		ABE60A621FC4492B00668B23 /* CurrencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A611FC4492B00668B23 /* CurrencyViewController.m */; };
+		ABE60A651FC4492B00668B23 /* TimeZoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A641FC4492B00668B23 /* TimeZoneViewController.m */; };
 		ABE60A681FC4492B00668B23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE60A661FC4492B00668B23 /* Main.storyboard */; };
 		ABE60A6A1FC4492B00668B23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABE60A691FC4492B00668B23 /* Assets.xcassets */; };
 		ABE60A6D1FC4492B00668B23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABE60A6B1FC4492B00668B23 /* LaunchScreen.storyboard */; };
@@ -40,10 +40,10 @@
 		ABE60A5B1FC4492B00668B23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ABE60A5D1FC4492B00668B23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ABE60A5E1FC4492B00668B23 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		ABE60A601FC4492B00668B23 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		ABE60A611FC4492B00668B23 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		ABE60A631FC4492B00668B23 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		ABE60A641FC4492B00668B23 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		ABE60A601FC4492B00668B23 /* CurrencyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CurrencyViewController.h; sourceTree = "<group>"; };
+		ABE60A611FC4492B00668B23 /* CurrencyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CurrencyViewController.m; sourceTree = "<group>"; };
+		ABE60A631FC4492B00668B23 /* TimeZoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeZoneViewController.h; sourceTree = "<group>"; };
+		ABE60A641FC4492B00668B23 /* TimeZoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeZoneViewController.m; sourceTree = "<group>"; };
 		ABE60A671FC4492B00668B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ABE60A691FC4492B00668B23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABE60A6C1FC4492B00668B23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,10 +106,10 @@
 			children = (
 				ABE60A5D1FC4492B00668B23 /* AppDelegate.h */,
 				ABE60A5E1FC4492B00668B23 /* AppDelegate.m */,
-				ABE60A601FC4492B00668B23 /* FirstViewController.h */,
-				ABE60A611FC4492B00668B23 /* FirstViewController.m */,
-				ABE60A631FC4492B00668B23 /* SecondViewController.h */,
-				ABE60A641FC4492B00668B23 /* SecondViewController.m */,
+				ABE60A601FC4492B00668B23 /* CurrencyViewController.h */,
+				ABE60A611FC4492B00668B23 /* CurrencyViewController.m */,
+				ABE60A631FC4492B00668B23 /* TimeZoneViewController.h */,
+				ABE60A641FC4492B00668B23 /* TimeZoneViewController.m */,
 				ABE60A661FC4492B00668B23 /* Main.storyboard */,
 				ABE60A691FC4492B00668B23 /* Assets.xcassets */,
 				ABE60A6B1FC4492B00668B23 /* LaunchScreen.storyboard */,
@@ -278,9 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABE60A651FC4492B00668B23 /* SecondViewController.m in Sources */,
+				ABE60A651FC4492B00668B23 /* TimeZoneViewController.m in Sources */,
 				ABE60A5F1FC4492B00668B23 /* AppDelegate.m in Sources */,
-				ABE60A621FC4492B00668B23 /* FirstViewController.m in Sources */,
+				ABE60A621FC4492B00668B23 /* CurrencyViewController.m in Sources */,
 				ABE60A5C1FC4492B00668B23 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
