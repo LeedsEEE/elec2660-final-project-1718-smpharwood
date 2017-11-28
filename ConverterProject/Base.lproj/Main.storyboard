@@ -9,19 +9,22 @@
         <!--UnitsTableViewController-->
         <scene sceneID="djg-uk-M5R">
             <objects>
-                <tableViewController title="UnitsTableViewController" id="7iH-vQ-Tv4" sceneMemberID="viewController">
+                <tableViewController title="UnitsTableViewController" id="7iH-vQ-Tv4" customClass="UnitsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="btL-PY-2ku">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="n6q-3L-Wnz">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="n6q-3L-Wnz" id="4ha-bD-EQz">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vts-gN-wcT" kind="show" id="xBT-GV-8aF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -29,17 +32,54 @@
                             <outlet property="delegate" destination="7iH-vQ-Tv4" id="Ofv-1O-cBf"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Units" image="second" id="wCF-Yz-qaI"/>
+                    <tabBarItem key="tabBarItem" title="Units" image="first" selectedImage="first" id="wCF-Yz-qaI"/>
+                    <navigationItem key="navigationItem" id="eRX-fr-BSw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ou5-cz-TUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1564" y="0.0"/>
+            <point key="canvasLocation" x="1807" y="-1216"/>
+        </scene>
+        <!--Units-->
+        <scene sceneID="sOy-n2-Hac">
+            <objects>
+                <viewController id="vts-gN-wcT" customClass="UnitsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eGH-or-22F"/>
+                        <viewControllerLayoutGuide type="bottom" id="9zg-Kf-2nI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rc9-jt-Jb7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Units" image="first" selectedImage="first" id="4Dz-pZ-BVT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Gn-8t-m4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2692" y="-1217"/>
+        </scene>
+        <!--Units-->
+        <scene sceneID="gUk-Tb-E8t">
+            <objects>
+                <navigationController id="2yG-kF-HlG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Units" image="first" id="ZrG-su-bxe"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BOa-lS-FBM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7iH-vQ-Tv4" kind="relationship" relationship="rootViewController" id="Lno-vn-tIv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7e-ga-RmX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033" y="-1215"/>
         </scene>
         <!--CurrencyViewController-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="CurrencyViewController" id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController title="CurrencyViewController" id="9pv-A4-QxB" customClass="CurrencyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -68,16 +108,16 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="-1" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" tag="-1" title="Currency" image="first" selectedImage="first" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="-393"/>
+            <point key="canvasLocation" x="1033" y="-505"/>
         </scene>
         <!--TimeZoneViewController-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="TimeZoneViewController" id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController title="TimeZoneViewController" id="8rJ-Kc-sve" customClass="TimeZoneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -111,7 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="467"/>
+            <point key="canvasLocation" x="1033" y="511"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -124,9 +164,9 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="7iH-vQ-Tv4" kind="relationship" relationship="viewControllers" id="mpm-5R-xRY"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="ogw-9p-QMr"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="HNx-g3-3XB"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="2b9-5f-2UT"/>
+                        <segue destination="2yG-kF-HlG" kind="relationship" relationship="viewControllers" id="8xJ-oF-zSe"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -136,6 +176,5 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>
