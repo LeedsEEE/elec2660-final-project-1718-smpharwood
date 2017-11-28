@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABC3A0351FCD9C3400D339DD /* UnitsDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC3A0341FCD9C3400D339DD /* UnitsDataModel.m */; };
 		ABCF6FF61FCD7745000A7C9F /* UnitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF6FF51FCD7745000A7C9F /* UnitsViewController.m */; };
 		ABCF6FF91FCD7F58000A7C9F /* UnitsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF6FF81FCD7F58000A7C9F /* UnitsTableViewController.m */; };
+		ABCF6FFC1FCD8AD2000A7C9F /* UnitsIO.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF6FFB1FCD8AD2000A7C9F /* UnitsIO.m */; };
 		ABE60A5C1FC4492B00668B23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A5B1FC4492B00668B23 /* main.m */; };
 		ABE60A5F1FC4492B00668B23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A5E1FC4492B00668B23 /* AppDelegate.m */; };
 		ABE60A621FC4492B00668B23 /* CurrencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A611FC4492B00668B23 /* CurrencyViewController.m */; };
@@ -38,10 +40,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ABC3A0331FCD9C3400D339DD /* UnitsDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitsDataModel.h; sourceTree = "<group>"; };
+		ABC3A0341FCD9C3400D339DD /* UnitsDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitsDataModel.m; sourceTree = "<group>"; };
 		ABCF6FF41FCD7745000A7C9F /* UnitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitsViewController.h; sourceTree = "<group>"; };
 		ABCF6FF51FCD7745000A7C9F /* UnitsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitsViewController.m; sourceTree = "<group>"; };
 		ABCF6FF71FCD7F58000A7C9F /* UnitsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitsTableViewController.h; sourceTree = "<group>"; };
 		ABCF6FF81FCD7F58000A7C9F /* UnitsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitsTableViewController.m; sourceTree = "<group>"; };
+		ABCF6FFA1FCD8AD2000A7C9F /* UnitsIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitsIO.h; sourceTree = "<group>"; };
+		ABCF6FFB1FCD8AD2000A7C9F /* UnitsIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitsIO.m; sourceTree = "<group>"; };
 		ABE60A571FC4492B00668B23 /* ConverterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConverterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE60A5B1FC4492B00668B23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ABE60A5D1FC4492B00668B23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -119,6 +125,10 @@
 				ABCF6FF51FCD7745000A7C9F /* UnitsViewController.m */,
 				ABCF6FF71FCD7F58000A7C9F /* UnitsTableViewController.h */,
 				ABCF6FF81FCD7F58000A7C9F /* UnitsTableViewController.m */,
+				ABCF6FFA1FCD8AD2000A7C9F /* UnitsIO.h */,
+				ABCF6FFB1FCD8AD2000A7C9F /* UnitsIO.m */,
+				ABC3A0331FCD9C3400D339DD /* UnitsDataModel.h */,
+				ABC3A0341FCD9C3400D339DD /* UnitsDataModel.m */,
 				ABE60A631FC4492B00668B23 /* TimeZoneViewController.h */,
 				ABE60A641FC4492B00668B23 /* TimeZoneViewController.m */,
 				ABE60A691FC4492B00668B23 /* Assets.xcassets */,
@@ -289,7 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABCF6FF61FCD7745000A7C9F /* UnitsViewController.m in Sources */,
+				ABC3A0351FCD9C3400D339DD /* UnitsDataModel.m in Sources */,
 				ABE60A651FC4492B00668B23 /* TimeZoneViewController.m in Sources */,
+				ABCF6FFC1FCD8AD2000A7C9F /* UnitsIO.m in Sources */,
 				ABE60A5F1FC4492B00668B23 /* AppDelegate.m in Sources */,
 				ABE60A621FC4492B00668B23 /* CurrencyViewController.m in Sources */,
 				ABE60A5C1FC4492B00668B23 /* main.m in Sources */,
