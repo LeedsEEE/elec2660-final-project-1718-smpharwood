@@ -20,11 +20,11 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D7y-eo-zuN" id="miV-DA-6HW">
-                                    <frame key="frameInset" width="375" height="43.5"/>
+                                    <frame key="frameInset" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ho7-o3-uke">
-                                            <frame key="frameInset" minX="15" width="345" height="43.5"/>
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -107,15 +107,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Nf-CU-5Ao">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="0Yu-6I-cJa"/>
-                                    <constraint firstAttribute="height" constant="30" id="l2w-YC-34o"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="typedAmount:" destination="9pv-A4-QxB" eventType="editingDidEnd" id="156-fl-4hM"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currency:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6x-jF-7WZ">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -237,6 +231,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jH3-VR-3NR">
+                                <frame key="frameInset" minX="179" minY="89" width="170" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T2r-8F-tgt">
+                                <frame key="frameInset" minX="179" minY="120" width="170" height="310"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -253,7 +257,6 @@
                             <constraint firstItem="jM7-1X-r7V" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="60" id="H31-lu-lxZ"/>
                             <constraint firstItem="UhP-af-dcB" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="13" id="H4q-6p-VGr"/>
                             <constraint firstItem="jM7-1X-r7V" firstAttribute="top" secondItem="PSU-It-Y7w" secondAttribute="bottom" constant="15" id="HuC-Zm-FQ3"/>
-                            <constraint firstItem="8Nf-CU-5Ao" firstAttribute="top" secondItem="OeM-PN-hng" secondAttribute="bottom" constant="30" id="Kd1-Jw-SMm"/>
                             <constraint firstItem="wva-v8-JuM" firstAttribute="top" secondItem="Kat-d5-cA9" secondAttribute="bottom" constant="15" id="L1e-Jy-W3I"/>
                             <constraint firstItem="SSW-ap-2ti" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="130" id="MXk-YF-f75"/>
                             <constraint firstItem="PSU-It-Y7w" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="60" id="NUW-qt-UYF"/>
@@ -271,7 +274,6 @@
                             <constraint firstItem="fSt-fm-oFt" firstAttribute="top" secondItem="SSW-ap-2ti" secondAttribute="bottom" constant="30" id="gZK-0J-6bl"/>
                             <constraint firstItem="IqK-C1-9GY" firstAttribute="top" secondItem="fSt-fm-oFt" secondAttribute="bottom" constant="15" id="h0w-Ji-BZ3"/>
                             <constraint firstItem="F10-HS-gBk" firstAttribute="top" secondItem="sVh-eF-SAE" secondAttribute="bottom" constant="15" id="joT-ev-wHx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8Nf-CU-5Ao" secondAttribute="trailing" constant="10" id="joZ-FG-MNH"/>
                             <constraint firstItem="usf-hd-EF9" firstAttribute="top" secondItem="jM7-1X-r7V" secondAttribute="bottom" constant="15" id="m38-gv-HNh"/>
                             <constraint firstItem="sVh-eF-SAE" firstAttribute="top" secondItem="mdZ-gQ-DMg" secondAttribute="bottom" constant="15" id="mNj-Gn-EFk"/>
                             <constraint firstItem="75o-Pu-lmW" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="60" id="mzF-56-bfQ"/>
@@ -287,6 +289,26 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="-1" title="Currency" image="first" selectedImage="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="currencyNameLabel1" destination="fSt-fm-oFt" id="06t-lS-KTY"/>
+                        <outlet property="currencyNameLabel2" destination="IqK-C1-9GY" id="JAT-lo-oki"/>
+                        <outlet property="currencyNameLabel3" destination="75o-Pu-lmW" id="HSB-OF-k7J"/>
+                        <outlet property="currencyNameLabel4" destination="PSU-It-Y7w" id="ggC-Le-Ktb"/>
+                        <outlet property="currencyNameLabel5" destination="jM7-1X-r7V" id="26h-3P-ll1"/>
+                        <outlet property="currencyNameLabel6" destination="usf-hd-EF9" id="W0y-nT-0uA"/>
+                        <outlet property="currencyNameLabel7" destination="EKr-6C-g06" id="Aam-qZ-15t"/>
+                        <outlet property="currencyNameLabel8" destination="OIt-GT-cOJ" id="Y6f-Or-LoE"/>
+                        <outlet property="currencySelectButton" destination="jH3-VR-3NR" id="JOL-VA-zdW"/>
+                        <outlet property="currencySelectTV" destination="T2r-8F-tgt" id="0xw-C3-Gwi"/>
+                        <outlet property="currencyValueLabel1" destination="mdZ-gQ-DMg" id="6Zr-Q5-S84"/>
+                        <outlet property="currencyValueLabel2" destination="sVh-eF-SAE" id="6ND-LU-PuV"/>
+                        <outlet property="currencyValueLabel3" destination="F10-HS-gBk" id="2h8-Hg-ebQ"/>
+                        <outlet property="currencyValueLabel4" destination="yd0-Fw-MRu" id="vI7-xo-rxB"/>
+                        <outlet property="currencyValueLabel5" destination="Kat-d5-cA9" id="FSk-Lc-Uj6"/>
+                        <outlet property="currencyValueLabel6" destination="wva-v8-JuM" id="Bws-fP-3Ek"/>
+                        <outlet property="currencyValueLabel7" destination="aM2-2v-ufY" id="Snl-jT-GZQ"/>
+                        <outlet property="currencyValueLabel8" destination="SQ9-e6-KYX" id="e4s-T8-ZOH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

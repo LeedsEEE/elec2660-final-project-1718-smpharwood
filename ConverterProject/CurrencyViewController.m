@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.data = [[NSArray alloc] initWithObjects:@"USD",@"GBP",@"EUR",@"AUD",@"CNY",@"JPY",@"AED",@"CAD",@"RUB", nil];
+    
 }
 
 
@@ -25,5 +27,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+- (IBAction)typedAmount:(id)sender {
+}
 @end
