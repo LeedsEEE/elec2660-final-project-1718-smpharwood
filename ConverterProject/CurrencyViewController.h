@@ -16,6 +16,8 @@
 @property(strong, nonatomic) NSArray *data;
 
 
+- (IBAction)currencySelectButtonAction:(id)sender;
+
 
 
 
