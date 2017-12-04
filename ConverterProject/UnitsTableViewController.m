@@ -10,12 +10,16 @@
 
 @interface UnitsTableViewController ()
 
+@property (strong, nonatomic) UnitsDataModel *data;
+
 @end
 
 @implementation UnitsTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.data = [[UnitsDataModel alloc] init];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -36,14 +40,28 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 6;
+    
+    NSInteger numberofRows;
+    
+    if (section ==0) {
+        numberofRows = self.data.typesofunits.count;
+    }
+    return numberofRows;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"UnitCell"  forIndexPath:indexPath];
     
-    // Configure the cell...
+    //Configure the cell...
+    
+    if(indexPath.section == 0) {    //types of units
+        
+        UnitsIO *tempUnits = [self.data.typesofunits objectAtIndex:indexPath.row];
+        
+        cell.textLabel.text =  tempUnits.unittype;
+        
+    }
     
     return cell;
 }

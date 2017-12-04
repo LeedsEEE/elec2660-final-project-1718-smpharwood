@@ -105,7 +105,7 @@
         volume.unit6toSI = 0.000568261;
         volume.unit7toSI = 0.0000001;
         
-        [self.typesofunits addObject:distance];     //index 0
+        [self.typesofunits addObject:distance];      //index 0
         [self.typesofunits addObject:mass];         //index 1
         [self.typesofunits addObject:speed];        //inex 2
         [self.typesofunits addObject:time];         //index 3
