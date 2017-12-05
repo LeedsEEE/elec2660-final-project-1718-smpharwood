@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UnitsTableViewController.h"
 
-@interface UnitsViewController : UIViewController
+@interface UnitsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIPickerView *UnitsPicker;
 
 @end

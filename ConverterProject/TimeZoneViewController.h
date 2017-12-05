@@ -17,7 +17,6 @@
 @property (strong, nonatomic) NSString *TimeSelected;
 - (IBAction)timeZoneSelectButtonAction:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIDatePicker *timePicker;
 
 
 @end
