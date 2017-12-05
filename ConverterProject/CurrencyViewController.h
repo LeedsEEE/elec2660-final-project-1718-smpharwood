@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *currencySelectTV;
 @property(strong, nonatomic) NSArray *data;
 @property NSInteger index;
-@property (strong, nonatomic) NSString *currencySelected;
 
 
 @property (nonatomic) float USDvalue;

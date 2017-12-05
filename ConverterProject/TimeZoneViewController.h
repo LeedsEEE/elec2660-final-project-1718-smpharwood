@@ -10,6 +10,15 @@
 
 @interface TimeZoneViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *timeZoneSelectButton;
+@property (weak, nonatomic) IBOutlet UITableView *timeZoneSelectTV;
+@property(strong, nonatomic) NSArray *data;
+@property NSInteger index;
+@property (strong, nonatomic) NSString *TimeSelected;
+- (IBAction)timeZoneSelectButtonAction:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UIDatePicker *timePicker;
+
 
 @end
 

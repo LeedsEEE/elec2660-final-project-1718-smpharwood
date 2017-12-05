@@ -45,7 +45,6 @@
     
     //NSIndexPath *indexPath = [self.currencySelectTV indexPathForSelectedRow];
     self.index = indexPath.row;
-    
 }
 
 
@@ -56,8 +55,7 @@
     }
     else
         self.currencySelectTV.hidden = YES;
-    
-    self.currencySelected = [self.data objectAtIndex:self.index];
+
 }
 
 - (IBAction)typedAmount:(id)sender {
