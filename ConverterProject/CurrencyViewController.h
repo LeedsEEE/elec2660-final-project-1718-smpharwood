@@ -8,38 +8,47 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CurrencyViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@interface CurrencyViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UIButton *currencySelectButton;
 @property (weak, nonatomic) IBOutlet UITableView *currencySelectTV;
 @property(strong, nonatomic) NSArray *data;
+@property NSInteger index;
+@property (strong, nonatomic) NSString *currencySelected;
+
+
+@property (nonatomic) float USDvalue;
+@property (nonatomic) float EURvalue;
+@property (nonatomic) float JPYvalue;
+@property (nonatomic) float GBPvalue;
+@property (nonatomic) float AUDvalue;
+@property (nonatomic) float CADvalue;
+@property (nonatomic) float CHFvalue;
+@property (nonatomic) float CNYvalue;
+@property (nonatomic) float SEKvalue;
+
 
 
 - (IBAction)currencySelectButtonAction:(id)sender;
 
-
-
+@property (weak, nonatomic) IBOutlet UITextField *typedAmountOutlet;
 
 - (IBAction)typedAmount:(id)sender;
+- (IBAction)backgroundPressed:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UILabel *currencyNameLabel1;
-@property (weak, nonatomic) IBOutlet UILabel *currencyNameLabel2;
-@property (weak, nonatomic) IBOutlet UILabel *currencyNameLabel3;
-@property (weak, nonatomic) IBOutlet UILabel *currencyNameLabel4;
-@property (weak, nonatomic) IBOutlet UILabel *currencyNameLabel5;
-@property (weak, nonatomic) IBOutlet UILabel *currencyNameLabel6;
-@property (weak, nonatomic) IBOutlet UILabel *currencyNameLabel7;
-@property (weak, nonatomic) IBOutlet UILabel *currencyNameLabel8;
+- (IBAction)convertButton:(UIButton *)sender;
 
-@property (weak, nonatomic) IBOutlet UILabel *currencyValueLabel1;
-@property (weak, nonatomic) IBOutlet UILabel *currencyValueLabel2;
-@property (weak, nonatomic) IBOutlet UILabel *currencyValueLabel3;
-@property (weak, nonatomic) IBOutlet UILabel *currencyValueLabel4;
-@property (weak, nonatomic) IBOutlet UILabel *currencyValueLabel5;
-@property (weak, nonatomic) IBOutlet UILabel *currencyValueLabel6;
-@property (weak, nonatomic) IBOutlet UILabel *currencyValueLabel7;
-@property (weak, nonatomic) IBOutlet UILabel *currencyValueLabel8;
+@property (weak, nonatomic) IBOutlet UILabel *valueUSDlabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueEURlabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueJPYlabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueGBPlabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueAUDlabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueCADlabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueCHFlabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueCNYlabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueSEKlabel;
 
 @end
 
