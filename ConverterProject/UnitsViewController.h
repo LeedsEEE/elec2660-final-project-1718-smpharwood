@@ -7,10 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UnitsTableViewController.h"
+#import "UnitsIO.h"
 
 @interface UnitsViewController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIPickerView *UnitsPicker;
+
+
+
+@property (weak, nonatomic) IBOutlet UILabel *outputValueLabel;
+@property (weak, nonatomic) IBOutlet UITextField *enterInputValue;
+
+@property (strong, nonatomic) UnitsIO *units;
+
 
 @end

@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.UnitsPicker.delegate = self;
+    self.UnitsPicker.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,6 +29,10 @@
 -(NSString *)pickerView:(UIPickerView *)pickerView
             titleForRow:(NSInteger)row
            forComponent:(NSInteger)component{
+    
+    NSString *coordinate = [NSString stringWithFormat:@"%ld,%ld",component,row];
+    
+    return coordinate;
 }
 
 -(void)pickerView:(UIPickerView *)pickerView

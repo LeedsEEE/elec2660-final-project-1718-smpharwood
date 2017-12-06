@@ -11,7 +11,6 @@
 		ABCF6FF61FCD7745000A7C9F /* UnitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF6FF51FCD7745000A7C9F /* UnitsViewController.m */; };
 		ABCF6FF91FCD7F58000A7C9F /* UnitsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF6FF81FCD7F58000A7C9F /* UnitsTableViewController.m */; };
 		ABCF6FFC1FCD8AD2000A7C9F /* UnitsIO.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF6FFB1FCD8AD2000A7C9F /* UnitsIO.m */; };
-		ABDA257A1FD58B2A0085D6DD /* add-button_318-32466.jpg in Resources */ = {isa = PBXBuildFile; fileRef = ABDA25791FD58B2A0085D6DD /* add-button_318-32466.jpg */; };
 		ABE60A5C1FC4492B00668B23 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A5B1FC4492B00668B23 /* main.m */; };
 		ABE60A5F1FC4492B00668B23 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A5E1FC4492B00668B23 /* AppDelegate.m */; };
 		ABE60A621FC4492B00668B23 /* CurrencyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE60A611FC4492B00668B23 /* CurrencyViewController.m */; };
@@ -49,7 +48,6 @@
 		ABCF6FF81FCD7F58000A7C9F /* UnitsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitsTableViewController.m; sourceTree = "<group>"; };
 		ABCF6FFA1FCD8AD2000A7C9F /* UnitsIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitsIO.h; sourceTree = "<group>"; };
 		ABCF6FFB1FCD8AD2000A7C9F /* UnitsIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitsIO.m; sourceTree = "<group>"; };
-		ABDA25791FD58B2A0085D6DD /* add-button_318-32466.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "add-button_318-32466.jpg"; path = "../../../add-button_318-32466.jpg"; sourceTree = "<group>"; };
 		ABE60A571FC4492B00668B23 /* ConverterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConverterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE60A5B1FC4492B00668B23 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ABE60A5D1FC4492B00668B23 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				ABE60A631FC4492B00668B23 /* TimeZoneViewController.h */,
 				ABE60A641FC4492B00668B23 /* TimeZoneViewController.m */,
 				ABE60A691FC4492B00668B23 /* Assets.xcassets */,
-				ABDA25791FD58B2A0085D6DD /* add-button_318-32466.jpg */,
 				ABE60A6B1FC4492B00668B23 /* LaunchScreen.storyboard */,
 				ABE60A6E1FC4492B00668B23 /* Info.plist */,
 				ABE60A5A1FC4492B00668B23 /* Supporting Files */,
@@ -276,7 +273,6 @@
 			files = (
 				ABE60A6D1FC4492B00668B23 /* LaunchScreen.storyboard in Resources */,
 				ABE60A6A1FC4492B00668B23 /* Assets.xcassets in Resources */,
-				ABDA257A1FD58B2A0085D6DD /* add-button_318-32466.jpg in Resources */,
 				ABE60A681FC4492B00668B23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
