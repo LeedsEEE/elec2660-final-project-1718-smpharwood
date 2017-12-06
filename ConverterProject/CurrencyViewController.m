@@ -14,55 +14,59 @@
 
 @implementation CurrencyViewController
 
+#pragma mark Drop-down Menu methods
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.data = [[NSArray alloc] initWithObjects:@"USD",@"EUR",@"JPY",@"GBP",@"AUD",@"CAD",@"CHF",@"CNY",@"SEK", nil];
+    self.data = [[NSArray alloc] initWithObjects:       //Options in the drop-down menu
+                 @"USD",            //United States Dollar
+                 @"EUR",            //Euro
+                 @"JPY",            //Japanese Yen
+                 @"GBP",            //Great British Pound
+                 @"AUD",            //Australian Dollar
+                 @"CAD",            //Canadian Dollar
+                 @"CHF",            //Swiss Franc
+                 @"CNY",            //Renminbi (Chinese Yuan)
+                 @"SEK",            //Swedish Krona
+                 @"NZD",            //New Zealand Dollar
+                 nil];
     self.currencySelectTV.delegate = self;
     self.currencySelectTV.dataSource = self;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{   //make number of rows in table view equal to the number of currencies (10)
     return [self.data count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
     static NSString *currencyTableIdentifier = @"currencyTableItem";
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:currencyTableIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:currencyTableIdentifier];
        if (cell == nil){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:currencyTableIdentifier];
-    }
-        cell.textLabel.text = [self.data objectAtIndex:indexPath.row];
-    return cell;
+           cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:currencyTableIdentifier];
+       }
     
+    cell.textLabel.text = [self.data objectAtIndex:indexPath.row];
+    return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
     UITableViewCell *cell = [self.currencySelectTV cellForRowAtIndexPath:indexPath];
     [self.currencySelectButton setTitle:cell.textLabel.text forState:UIControlStateNormal];
     self.currencySelectTV.hidden = YES;
-    
-    //NSIndexPath *indexPath = [self.currencySelectTV indexPathForSelectedRow];
     self.index = indexPath.row;
 }
 
-
+//code to hide the table view 'currencySelectTV' once a currency has been selected
 - (IBAction)currencySelectButtonAction:(id)sender {
-    
     if (self.currencySelectTV.hidden == YES) {
         self.currencySelectTV.hidden = NO;
     }
     else
         self.currencySelectTV.hidden = YES;
-
 }
 
-- (IBAction)typedAmount:(id)sender {
-    
-    
-}
 
+//code to hide the numerical keyboard if the background space is pressed
 - (IBAction)backgroundPressed:(id)sender {
     if ([self.typedAmountOutlet isFirstResponder]) {
         [self.typedAmountOutlet resignFirstResponder];
@@ -70,10 +74,15 @@
 }
 
 
-
+#pragma mark Currency Conversion Methods
 
 - (IBAction)convertButton:(UIButton *)sender {
     
+    /*
+    This section of code converts the amount that was typed into the textbox 'typedAmountOutlet' from 
+    the currency selected in the drop-down menu into US dollars. It does this by multiplying the value 
+    by a certain constant. The constant is determined by the index selected in the 'data' array.
+    */
     if (self.index == 0) {      //USD currency selected
         _USDvalue = 1 * [self.typedAmountOutlet.text floatValue];
     }
@@ -101,7 +110,15 @@
     else if (self.index == 8) { //SEK currency selected
         _USDvalue = 0.11905 * [self.typedAmountOutlet.text floatValue];
     }
+    else if (self.index == 9) { //NZD currency selected
+        _NZDvalue = 0.68502 * [self.typedAmountOutlet.text floatValue];
+    }
     
+    /*
+    All of the output currencies are then determined by dividing the amount in US dollars by the same
+    set of constants that were used to convert the input currency to US dollars by way of
+    multiplication.
+    */
     _USDvalue = _USDvalue /1.00000;
     _EURvalue = _USDvalue /1.17709;
     _JPYvalue = _USDvalue /0.00884;
@@ -111,8 +128,9 @@
     _CHFvalue = _USDvalue /1.00598;
     _CNYvalue = _USDvalue /0.15080;
     _SEKvalue = _USDvalue /0.11905;
+    _NZDvalue = _USDvalue /0.68502;
     
-    
+    //These values are then printed to the relevant labels as floating point numbers to two decimal places.
     self.valueUSDlabel.text = [NSString stringWithFormat:@"%.02f",_USDvalue];
     self.valueEURlabel.text = [NSString stringWithFormat:@"%.02f",_EURvalue];
     self.valueJPYlabel.text = [NSString stringWithFormat:@"%.02f",_JPYvalue];
@@ -122,6 +140,7 @@
     self.valueCHFlabel.text = [NSString stringWithFormat:@"%.02f",_CHFvalue];
     self.valueCNYlabel.text = [NSString stringWithFormat:@"%.02f",_CNYvalue];
     self.valueSEKlabel.text = [NSString stringWithFormat:@"%.02f",_SEKvalue];
+    self.valueNZDlabel.text = [NSString stringWithFormat:@"%.02f",_NZDvalue];
     
 }
 

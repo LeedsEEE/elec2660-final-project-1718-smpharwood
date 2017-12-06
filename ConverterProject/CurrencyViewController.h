@@ -12,42 +12,42 @@
 @interface CurrencyViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>
 
 
+@property (weak, nonatomic) IBOutlet UITableView *currencySelectTV;     //Table view gives the illusion of a drop-down menu
+@property(strong, nonatomic) NSArray *data;                             //Array of currency codes
+@property NSInteger index;                                              //index position in the table view indicates which of the ten currencies has been selected
+- (IBAction)currencySelectButtonAction:(id)sender;                      //button that together with the tableView gives the illusion of a drop down menu
 @property (weak, nonatomic) IBOutlet UIButton *currencySelectButton;
-@property (weak, nonatomic) IBOutlet UITableView *currencySelectTV;
-@property(strong, nonatomic) NSArray *data;
-@property NSInteger index;
+
+@property (weak, nonatomic) IBOutlet UITextField *typedAmountOutlet;    //typed amount in the textbox
+
+- (IBAction)backgroundPressed:(id)sender;                               //Action that hides the decimal numerical keyboard which allows the bottom of the screen to be seen again
+
+- (IBAction)convertButton:(UIButton *)sender;                           //Action button that intitiates the conversion
 
 
-@property (nonatomic) float USDvalue;
-@property (nonatomic) float EURvalue;
-@property (nonatomic) float JPYvalue;
-@property (nonatomic) float GBPvalue;
-@property (nonatomic) float AUDvalue;
-@property (nonatomic) float CADvalue;
-@property (nonatomic) float CHFvalue;
-@property (nonatomic) float CNYvalue;
-@property (nonatomic) float SEKvalue;
+//outputted values in the given ten currencies
+@property (nonatomic) float USDvalue;                                   //calculated value in United States Dollars
+@property (nonatomic) float EURvalue;                                   //calculated value in Euros
+@property (nonatomic) float JPYvalue;                                   //calculated value in Japanese Yen
+@property (nonatomic) float GBPvalue;                                   //calculated value in Great British Pounds
+@property (nonatomic) float AUDvalue;                                   //calculated value in Austrailan Dollars
+@property (nonatomic) float CADvalue;                                   //calculated value in Canadian Dollars
+@property (nonatomic) float CHFvalue;                                   //calculated value in Swiss Francs
+@property (nonatomic) float CNYvalue;                                   //calculated value in Chinese Yuan
+@property (nonatomic) float SEKvalue;                                   //calculated value in Swedish Krona
+@property (nonatomic) float NZDvalue;                                   //calculated value in New Zealand Dollars
 
+@property (weak, nonatomic) IBOutlet UILabel *valueUSDlabel;            //output label to display float USDvalue
+@property (weak, nonatomic) IBOutlet UILabel *valueEURlabel;            //output label to display float EURvalue
+@property (weak, nonatomic) IBOutlet UILabel *valueJPYlabel;            //output label to display float JPYvalue
+@property (weak, nonatomic) IBOutlet UILabel *valueGBPlabel;            //output label to display float GBPvalue
+@property (weak, nonatomic) IBOutlet UILabel *valueAUDlabel;            //output label to display float AUDvalue
+@property (weak, nonatomic) IBOutlet UILabel *valueCADlabel;            //output label to display float CADvalue
+@property (weak, nonatomic) IBOutlet UILabel *valueCHFlabel;            //output label to display float CHFvalue
+@property (weak, nonatomic) IBOutlet UILabel *valueCNYlabel;            //output label to display float CNYvalue
+@property (weak, nonatomic) IBOutlet UILabel *valueSEKlabel;            //output label to display float SEKvalue
+@property (weak, nonatomic) IBOutlet UILabel *valueNZDlabel;            //output label to display float NZDvalue
 
-
-- (IBAction)currencySelectButtonAction:(id)sender;
-
-@property (weak, nonatomic) IBOutlet UITextField *typedAmountOutlet;
-
-- (IBAction)typedAmount:(id)sender;
-- (IBAction)backgroundPressed:(id)sender;
-
-- (IBAction)convertButton:(UIButton *)sender;
-
-@property (weak, nonatomic) IBOutlet UILabel *valueUSDlabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueEURlabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueJPYlabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueGBPlabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueAUDlabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueCADlabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueCHFlabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueCNYlabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueSEKlabel;
 
 @end
 
