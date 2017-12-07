@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.unitsTitleLabel.text = self.units.unittype;
     self.UnitsPicker.delegate = self;
     self.UnitsPicker.dataSource = self;
 }

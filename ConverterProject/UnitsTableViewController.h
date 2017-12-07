@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "UnitsDataModel.h"
+#import "UnitsViewController.h"
 
 @interface UnitsTableViewController : UITableViewController
 
