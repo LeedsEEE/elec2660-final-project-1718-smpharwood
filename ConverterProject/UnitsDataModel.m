@@ -30,8 +30,8 @@
         self.typesofunits = [NSMutableArray array];
         UnitsIO *speed = [[UnitsIO alloc] init];
         speed.unittype = @"Speed";
-        mass.namesofunits =             [NSMutableArray arrayWithObjects: @"inch/second",    @"metre/second",    @"kilometre/hour",  @"mile/hour",   @"foot/second", @"knot",    @"mach number", nil];
-        mass.multipliersofunits =      @[                                 @39.370079,        @1,                 @0.27778,           @0.44704,       @0.3048,        @0.514444,  @331.2];
+        speed.namesofunits =             [NSMutableArray arrayWithObjects: @"inch/second",    @"metre/second",    @"kilometre/hour",  @"mile/hour",   @"foot/second", @"knot",    @"mach number", nil];
+        speed.multipliersofunits =      @[                                 @39.370079,        @1,                 @0.27778,           @0.44704,       @0.3048,        @0.514444,  @331.2];
        
         self.typesofunits = [NSMutableArray array];
         UnitsIO *time = [[UnitsIO alloc] init];

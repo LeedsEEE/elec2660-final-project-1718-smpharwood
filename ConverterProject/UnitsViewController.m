@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //Do any additional setup after loading the view.
     self.unitsTitleLabel.text = self.units.unittype;
     self.UnitsPicker.delegate = self;
     self.UnitsPicker.dataSource = self;
@@ -24,27 +24,28 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    //Dispose of any resources that can be recreated.
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView
             titleForRow:(NSInteger)row
            forComponent:(NSInteger)component{
-
+    
         return _units.namesofunits[row];
 }
 
 -(void)pickerView:(UIPickerView *)pickerView
-    didSelectRow:(NSInteger)row
-    inComponent:(NSInteger)component{
-    
-    NSIndexPath *indexPath = self.UnitsPicker inde
-    
-    self.outputValueLabel.text = self.units.namesofunits objectAtIndex:;
+     didSelectRow:(NSInteger)row
+      inComponent:(NSInteger)component{
+    if (component == 0) {
+        self.inputrow = row;
+    }
+    else if (component == 1) {
+        self.outputrow = row;
+    }
 }
-
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 1;
+    return 2;
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView
@@ -54,5 +55,14 @@ numberOfRowsInComponent:(NSInteger)component{
     return numberofRows;
 }
 
-
+- (IBAction)convertButton:(UIButton *)sender {
+    
+    float siValue;
+    siValue = [self.units.multipliersofunits[self.inputrow]floatValue] * [self.typedAmountOutlet.text floatValue];
+    float outputValue;
+    outputValue =  siValue / [self.units.multipliersofunits[self.outputrow]floatValue];
+    self.outputValueLabel.text = [NSString stringWithFormat:@"%.03f",outputValue];
+    
+    
+}
 @end

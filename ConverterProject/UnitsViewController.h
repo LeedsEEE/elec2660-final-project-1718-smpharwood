@@ -16,8 +16,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *outputValueLabel;
 @property (weak, nonatomic) IBOutlet UITextField *enterInputValue;
 @property (weak, nonatomic) IBOutlet UILabel *unitsTitleLabel;
-
+@property (nonatomic) float siValue;
+@property (nonatomic) float outputValue;
 @property (strong, nonatomic) UnitsIO *units;
+
+- (IBAction)convertButton:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UITextField *typedAmountOutlet;
+@property (nonatomic) NSInteger inputrow;
+@property (nonatomic) NSInteger outputrow;
 
 
 @end
