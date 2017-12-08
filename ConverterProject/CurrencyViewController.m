@@ -64,6 +64,9 @@
     else
         self.currencySelectTV.hidden = YES;
 }
+/*The code used to create the illusion of a drop down menu using a table view and a button in conjunction was taken and
+ adapted from code that I found online in a tutorial by the youtuber 'IOS Hook'.
+ URL: https://www.youtube.com/watch?v=SVAj2aSi_RU */
 
 
 //code to hide the numerical keyboard if the background space is pressed
@@ -140,8 +143,8 @@
     self.valueCHFlabel.text = [NSString stringWithFormat:@"%.02f",_CHFvalue];
     self.valueCNYlabel.text = [NSString stringWithFormat:@"%.02f",_CNYvalue];
     self.valueSEKlabel.text = [NSString stringWithFormat:@"%.02f",_SEKvalue];
-    self.valueNZDlabel.text = [NSString stringWithFormat:@"%.02f",_NZDvalue];
-    
+    self.valueNZDlabel.text = [NSString stringWithFormat:@"%.02f",_NZDvalue];    
 }
+
 
 @end

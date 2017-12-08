@@ -35,12 +35,13 @@
 
 #pragma mark - Table view data source
 
+//There is only one column in the table view
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
+//The number of cells in the table is equal to the number of types of units available
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     NSInteger numberofRows;
     
     if (section ==0) {
@@ -53,14 +54,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: @"UnitCell"  forIndexPath:indexPath];
     
-    //Configure the cell...
-    
-    if(indexPath.section == 0) {    //types of units
-        
+    //The names of the cells in the table view are taken from the array created in UnitsDataModel
+    if(indexPath.section == 0) {
         UnitsIO *tempUnits = [self.data.typesofunits objectAtIndex:indexPath.row];
-        
         cell.textLabel.text =  tempUnits.unittype;
-        
     }
     
     return cell;
@@ -110,11 +107,13 @@
     if ([[segue identifier] isEqualToString:@"ShowUnitsDetails"]) {
         UnitsViewController *destinationViewController = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        
         if (indexPath.section == 0) {
             UnitsIO *tempUnits = [self.data.typesofunits objectAtIndex:indexPath.row];
             destinationViewController.units = tempUnits;
         }
     }
 }
+
 
 @end

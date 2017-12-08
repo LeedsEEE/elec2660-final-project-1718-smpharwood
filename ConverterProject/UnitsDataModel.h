@@ -12,5 +12,8 @@
 @interface UnitsDataModel : NSObject
 
 @property (strong,nonatomic) NSMutableArray *typesofunits;
+/* Each object in this array contains the title string and the two arrays that were contained in
+the header of UnitsIO. This is why UnitsIO is declared in the header of this header. */
+
 
 @end
