@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB68B9861FDAF77900C05729 /* Screen Shot 2017-12-08 at 16.37.28.png in Resources */ = {isa = PBXBuildFile; fileRef = AB68B9851FDAF77900C05729 /* Screen Shot 2017-12-08 at 16.37.28.png */; };
 		ABC3A0351FCD9C3400D339DD /* UnitsDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC3A0341FCD9C3400D339DD /* UnitsDataModel.m */; };
 		ABCF6FF61FCD7745000A7C9F /* UnitsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF6FF51FCD7745000A7C9F /* UnitsViewController.m */; };
 		ABCF6FF91FCD7F58000A7C9F /* UnitsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABCF6FF81FCD7F58000A7C9F /* UnitsTableViewController.m */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB68B9851FDAF77900C05729 /* Screen Shot 2017-12-08 at 16.37.28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2017-12-08 at 16.37.28.png"; sourceTree = "<group>"; };
 		ABC3A0331FCD9C3400D339DD /* UnitsDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitsDataModel.h; sourceTree = "<group>"; };
 		ABC3A0341FCD9C3400D339DD /* UnitsDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitsDataModel.m; sourceTree = "<group>"; };
 		ABCF6FF41FCD7745000A7C9F /* UnitsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitsViewController.h; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				ABE60A631FC4492B00668B23 /* TimeZoneViewController.h */,
 				ABE60A641FC4492B00668B23 /* TimeZoneViewController.m */,
 				ABE60A691FC4492B00668B23 /* Assets.xcassets */,
+				AB68B9851FDAF77900C05729 /* Screen Shot 2017-12-08 at 16.37.28.png */,
 				ABE60A6B1FC4492B00668B23 /* LaunchScreen.storyboard */,
 				ABE60A6E1FC4492B00668B23 /* Info.plist */,
 				ABE60A5A1FC4492B00668B23 /* Supporting Files */,
@@ -273,6 +276,7 @@
 			files = (
 				ABE60A6D1FC4492B00668B23 /* LaunchScreen.storyboard in Resources */,
 				ABE60A6A1FC4492B00668B23 /* Assets.xcassets in Resources */,
+				AB68B9861FDAF77900C05729 /* Screen Shot 2017-12-08 at 16.37.28.png in Resources */,
 				ABE60A681FC4492B00668B23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,7 +457,6 @@
 		ABE60A881FC4492B00668B23 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ConverterProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.ac.Leeds.ConverterProject;
@@ -464,7 +467,6 @@
 		ABE60A891FC4492B00668B23 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ConverterProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uk.ac.Leeds.ConverterProject;
