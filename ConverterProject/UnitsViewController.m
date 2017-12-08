@@ -30,24 +30,28 @@
 -(NSString *)pickerView:(UIPickerView *)pickerView
             titleForRow:(NSInteger)row
            forComponent:(NSInteger)component{
-    
-    NSString *coordinate = [NSString stringWithFormat:@"%ld,%ld",component,row];
-    
-    return coordinate;
+
+        return _units.namesofunits[row];
 }
 
 -(void)pickerView:(UIPickerView *)pickerView
-     didSelectRow:(NSInteger)row
-      inComponent:(NSInteger)component{
+    didSelectRow:(NSInteger)row
+    inComponent:(NSInteger)component{
+    
+    NSIndexPath *indexPath = self.UnitsPicker inde
+    
+    self.outputValueLabel.text = self.units.namesofunits objectAtIndex:;
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 2;
+    return 1;
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component{
-    return 7;
+    NSInteger numberofRows;
+    numberofRows = self.units.namesofunits.count;
+    return numberofRows;
 }
 
 
